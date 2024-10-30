@@ -2,7 +2,7 @@
 #include<string>
 
 class GameObject{
-private:
+protected:
     int id; // Идентификатор объекта
     std::string name; // имя объекта
     int x; // координаты
@@ -17,7 +17,7 @@ public:
     int getY() const { return y; } //где находится объект по Y координате   
 };
 class Unit: public GameObject{
-private:
+protected:
     float hp;
     bool alive;
 public:
@@ -64,7 +64,7 @@ public:
 };
 
 class Building : public GameObject {
-privite:
+protected:
     bool built;
 
 public:

@@ -13,7 +13,6 @@ int main() {
     mobileHouse.construct();
     mobileHouse.move(10,10);
     archer.move(1, 2);
-
     enemy.receiveDamage(20);
     std::cout << enemy.getHp();
     return 0;

@@ -16,6 +16,7 @@ public:
     int getX() const { return x; } //где находится объект по X координате
     int getY() const { return y; } //где находится объект по Y координате   
 };
+
 class Unit: public GameObject{
 protected:
     float hp;

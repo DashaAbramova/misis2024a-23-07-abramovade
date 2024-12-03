@@ -204,15 +204,19 @@ public:
         this->topping = topping;
     }
 
-    friend std::ostream& operator<<(std::ostream& os, const Pizza& pizza) {
-        os << "Pizza{" 
-           << "dough='" << pizza.dough << '\'' 
-           << ", sauce='" << pizza.sauce << '\'' 
-           << ", topping='" << pizza.topping << '\'' 
+    std::ostream& operator<<(std::ostream& os) const {
+        os << "Pizza{"
+           << "dough='" << dough << '\'' 
+           << ", sauce='" << sauce << '\'' 
+           << ", topping='" << topping << '\'' 
            << '}';
         return os;
     }
 };
+
+std::ostream& operator<<(std::ostream& os, const Pizza& pizza) {
+    return pizza.operator<<(os);
+}
 
 // Интерфейс строителя
 class PizzaBuilder {
